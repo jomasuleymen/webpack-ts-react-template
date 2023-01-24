@@ -3,8 +3,7 @@ export {};
 declare global {
 	namespace NodeJS {
 		interface ProcessEnv {
-			SERVER_URL: string;
-			WEBPACK_PORT: number;
+			API_ENDPOINT: string;
 			ENV: "test" | "development" | "production";
 		}
 	}
