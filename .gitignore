@@ -1,6 +1,6 @@
 # dotenv environment variable files
-.env
-.env.*
+# .env
+# .env.*
 
 # dependencies
 /.vscode
