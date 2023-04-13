@@ -4,8 +4,8 @@ import { NavLink } from "react-router-dom";
 import "./header.style.scss";
 
 const navigations = [
-	{ name: "Плейлист", href: "/playlist", key: "playlist" },
-	{ name: "Админ панель", href: "/admin", key: "admin" },
+	{ name: "Hello", href: "/hello", key: "hello" },
+	{ name: "Admin", href: "/admin", key: "admin" },
 ];
 
 const Header: React.FC = () => {
