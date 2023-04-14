@@ -13,11 +13,11 @@ module.exports = {
 		resolve: {
 			extensions: [".tsx", ".ts", ".jsx", ".js"],
 			alias: {
+				"@public": path.join(PROJECT_ROOT, "public"),
 				"@store": path.join(SOURCE_PATH, "store"),
 				"@styles": path.join(SOURCE_PATH, "styles"),
 				"@pages": path.join(SOURCE_PATH, "pages"),
 				"@components": path.join(SOURCE_PATH, "components"),
-				"@public": path.join(PROJECT_ROOT, "public"),
 			},
 			symlinks: false,
 			cacheWithContext: false,
