@@ -25,12 +25,18 @@
 		"resolveJsonModule": true,
 		"isolatedModules": true,
 		"noEmit": true,
+		"esModuleInterop": true,
 		"paths": {
 			"@store/*": ["./src/store/*"],
 			"@public/*": ["./public/*"],
 			"@styles/*": ["./styles/*"],
 			"@pages/*": ["./src/pages/*"],
 			"@components/*": ["./src/components/*"]
+		}
+	},
+	"ts-node": {
+		"compilerOptions": {
+			"module": "CommonJS"
 		}
 	},
 	"exclude": ["node_modules", "dev_build", "prod_build", "dist", "webpack"]

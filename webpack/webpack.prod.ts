@@ -1,16 +1,15 @@
-const path = require("path");
-const Dotenv = require("dotenv-webpack");
-const webpack = require("webpack");
-const common = require("./webpack.common");
-const { merge } = require("webpack-merge");
+import path from "path";
+import Dotenv from "dotenv-webpack";
+import webpack from "webpack";
+import { PROJECT_ROOT, commonConfig } from "./webpack.common";
+import { merge } from "webpack-merge";
 
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const TerserWebpackPlugin = require("terser-webpack-plugin");
+import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import CssMinimizerPlugin from "css-minimizer-webpack-plugin";
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import TerserWebpackPlugin from "terser-webpack-plugin";
 
-const { PROJECT_ROOT, SOURCE_PATH, commonConfig } = common;
-module.exports = merge(commonConfig, {
+export default merge(commonConfig, {
 	mode: "production",
 	output: {
 		path: path.join(PROJECT_ROOT, "prod_build"),

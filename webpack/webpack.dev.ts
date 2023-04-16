@@ -1,16 +1,14 @@
-const path = require("path");
-const webpack = require("webpack");
-const Dotenv = require("dotenv-webpack");
-const common = require("./webpack.common");
-const { merge } = require("webpack-merge");
+import path from "path";
+import webpack from "webpack";
+import Dotenv from "dotenv-webpack";
+import { PROJECT_ROOT, commonConfig } from "./webpack.common";
+import { merge } from "webpack-merge";
 
-var HtmlWebpackPlugin = require("html-webpack-plugin");
-
-const { PROJECT_ROOT, SOURCE_PATH, commonConfig } = common;
+import HtmlWebpackPlugin from "html-webpack-plugin";
 
 const PORT = 3000;
 
-module.exports = merge(commonConfig, {
+export default merge(commonConfig, {
 	mode: "development",
 	output: {
 		filename: "[name].bundle.js",
