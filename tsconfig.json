@@ -1,7 +1,6 @@
 {
 	"compilerOptions": {
 		"experimentalDecorators": true,
-		"baseUrl": ".",
 		"outDir": "build/dist",
 		"module": "ESNext",
 		"target": "ES5",
@@ -26,12 +25,12 @@
 		"isolatedModules": true,
 		"noEmit": true,
 		"esModuleInterop": true,
+		"baseUrl": "src",
 		"paths": {
-			"@store/*": ["./src/store/*"],
-			"@public/*": ["./public/*"],
-			"@styles/*": ["./styles/*"],
-			"@pages/*": ["./src/pages/*"],
-			"@components/*": ["./src/components/*"]
+			"@store/*": ["store/*"],
+			"@styles/*": ["styles/*"],
+			"@pages/*": ["pages/*"],
+			"@components/*": ["components/*"]
 		}
 	},
 	"ts-node": {
@@ -39,5 +38,5 @@
 			"module": "CommonJS"
 		}
 	},
-	"exclude": ["node_modules", "dev_build", "prod_build", "dist", "webpack"]
+	"include": ["src"]
 }
